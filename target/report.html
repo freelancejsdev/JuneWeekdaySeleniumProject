@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22ml-3%20ml-md-0%22%20viewBox%3D%220%200%2040.59%2046.31%22%20width%3D%2240.59%22%20height%3D%2246.31%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2323d96c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M30.283%203.645q-.528-.317-1.08-.593a16.164%2016.164%200%2000-1.154-.518c-.124-.052-.247-.1-.372-.149-.343-.127-.689-.268-1.042-.371a19.427%2019.427%200%2010-9.792%2037.51v5.56c11.676-1.753%2022.016-10.979%2022.787-23.093.459-7.289-3.193-14.73-9.347-18.346z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20d%3D%22M15.787%2046.307v-5.935A20.472%2020.472%200%201126.959%201.015c.274.08.557.187.832.291l.248.093c.165.064.291.113.417.167.348.137.739.313%201.208.543q.589.295%201.153.633c6.393%203.756%2010.354%2011.518%209.857%2019.316-.763%2012-10.722%2022.122-23.679%2024.067zm4.8-44.214h-.026a18.366%2018.366%200%2000-3.524%2036.408l.85.165v5.18c11.392-2.224%2020.009-11.272%2020.686-21.922.448-7.033-3.1-14.018-8.83-17.383l-.008-.005A14.691%2014.691%200%200027.654%203.5a5.74%205.74%200%2000-.344-.138l-.27-.1a9.49%209.49%200%2000-.708-.249%2018.425%2018.425%200%2000-5.743-.92z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.666%2010.58a1.8%201.8%200%20011.583.608%204.184%204.184%200%2001.728%201.107c.645%201.422%201.027%203.461.23%204.605a6.334%206.334%200%2001-3.981-3.087%203.236%203.236%200%2001-.347-1.339%201.957%201.957%200%20011.787-1.894zm-5.683%208.025a7.742%207.742%200%20001.218.737%205.789%205.789%200%20004.883-.138%206.116%206.116%200%2000-3.345-3.45%203.664%203.664%200%2000-1.442-.321%201.884%201.884%200%2000-.319%200%201.766%201.766%200%2000-.995%203.172zm6.1%203.433c-.777-.518-2.379-.309-3.312-.292a4.416%204.416%200%2000-1.666.352%203.5%203.5%200%2000-1.218.738%201.817%201.817%200%20001.409%203.171%203.3%203.3%200%20001.442-.321c1.436-.62%203.141-2.32%203.346-3.648zm2.61%202a6.556%206.556%200%2000-3.724%203.506%203.091%203.091%200%2000-.321%201.314%201.907%201.907%200%20003.3%201.346%207.422%207.422%200%2000.7-1.218c.621-1.333.866-3.72.046-4.948zm2.557-7.167a5.941%205.941%200%20003.7-3.167%203.243%203.243%200%2000.319-1.346%201.915%201.915%200%2000-1.794-1.954%201.832%201.832%200%2000-1.6.641%207.382%207.382%200%2000-.705%201.218c-.62%201.434-.842%203.48.081%204.603zm4.208%2012.115a3.244%203.244%200%2000-.321-1.345%205.869%205.869%200%2000-3.554-3.269%205.386%205.386%200%2000-.226%204.711%204.147%204.147%200%2000.7%201.121c1.133%201.23%203.505.32%203.402-1.218zm4.2-6.28a7.466%207.466%200%2000-1.217-.7%204.425%204.425%200%2000-1.666-.352%206.4%206.4%200%2000-3.188.555%205.959%205.959%200%20003.316%203.386%203.672%203.672%200%20001.442.32%201.8%201.8%200%20001.31-3.209z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+  max-width: calc(100% - 1.5em);
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  max-width: 100%;
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-attachment__text {
+  background-color: #ebebeb;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"15.0.0","implementation":{"name":"cucumber-jvm","version":"6.10.4"},"runtime":{"name":"Java HotSpot(TM) 64-Bit Server VM","version":"25.211-b12"},"os":{"name":"Mac OS X"},"cpu":{"name":"x86_64"}}},{"testRunStarted":{"timestamp":{"seconds":"1626261726","nanos":97000000}}},{"source":{"uri":"file:///Users/niharikasree/Desktop/Trainings/SeleniumJava/JuneWeekdayBatch/CucumberBDD_Junit_Pom/src/test/java/features/Login.feature","data":"Feature: login to nop commerce\n  In order to login to application\n  As a valid user\n  I should provide valid email and password\n\n  @ui\n Scenario: Verify login with valid credentials\n   Given i navigate to url \"https://demo.nopcommerce.com/\"\n   Then  i should be navigated to home page\n   When  i click on login link from the navbar\n   Then  i should be navigated to login page\n   When  i enter email as \"user1@nop.com\"\n   And   i enter password as \"Testing@123\"\n   And   i click on login button\n   Then  i should be logged in successfully\n\n\n\n\n\n\n\n\n\n\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///Users/niharikasree/Desktop/Trainings/SeleniumJava/JuneWeekdayBatch/CucumberBDD_Junit_Pom/src/test/java/features/Login.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"login to nop commerce","description":"  In order to login to application\n  As a valid user\n  I should provide valid email and password","children":[{"scenario":{"location":{"line":7,"column":2},"tags":[{"location":{"line":6,"column":3},"name":"@ui","id":"5a9218f3-4c4c-4655-9d9a-efc50412a0f8"}],"keyword":"Scenario","name":"Verify login with valid credentials","steps":[{"location":{"line":8,"column":4},"keyword":"Given ","text":"i navigate to url \"https://demo.nopcommerce.com/\"","id":"a3a7a5b2-2988-4142-8c3c-d21de2e14f79"},{"location":{"line":9,"column":4},"keyword":"Then ","text":"i should be navigated to home page","id":"c1c4d0c5-eb4b-4098-aec3-5cf4d67c3f54"},{"location":{"line":10,"column":4},"keyword":"When ","text":"i click on login link from the navbar","id":"01e2d126-4551-41b8-b421-bb0b437b5c77"},{"location":{"line":11,"column":4},"keyword":"Then ","text":"i should be navigated to login page","id":"04341c47-4619-4443-a85f-13f9d7046351"},{"location":{"line":12,"column":4},"keyword":"When ","text":"i enter email as \"user1@nop.com\"","id":"c28b8b9a-f30b-426b-b08c-36c30deea621"},{"location":{"line":13,"column":4},"keyword":"And ","text":"i enter password as \"Testing@123\"","id":"9fcb5c71-79c6-46db-af35-0e6069be249f"},{"location":{"line":14,"column":4},"keyword":"And ","text":"i click on login button","id":"0d4752d6-ee34-48cc-97b6-1adb165428d7"},{"location":{"line":15,"column":4},"keyword":"Then ","text":"i should be logged in successfully","id":"8265b39c-335e-4ee5-95ad-0f349c468d41"}],"id":"ec31ce77-5153-4102-9061-a6baaa3fe04d"}}]}}},{"pickle":{"id":"5260c78a-6882-40a3-9e75-15ea808ccd51","uri":"file:///Users/niharikasree/Desktop/Trainings/SeleniumJava/JuneWeekdayBatch/CucumberBDD_Junit_Pom/src/test/java/features/Login.feature","name":"Verify login with valid credentials","language":"en","steps":[{"text":"i navigate to url \"https://demo.nopcommerce.com/\"","id":"f94e8004-7ccc-4760-84c5-a2b24c58015d","astNodeIds":["a3a7a5b2-2988-4142-8c3c-d21de2e14f79"]},{"text":"i should be navigated to home page","id":"0c020b45-3e74-484c-98d4-9873274f3de5","astNodeIds":["c1c4d0c5-eb4b-4098-aec3-5cf4d67c3f54"]},{"text":"i click on login link from the navbar","id":"ef5a3ad0-de10-4fe7-9779-359ef97c7fd3","astNodeIds":["01e2d126-4551-41b8-b421-bb0b437b5c77"]},{"text":"i should be navigated to login page","id":"0018e20e-a978-41a5-a26d-2527d671839a","astNodeIds":["04341c47-4619-4443-a85f-13f9d7046351"]},{"text":"i enter email as \"user1@nop.com\"","id":"b73558dc-6de1-4785-ab41-2122813eec8b","astNodeIds":["c28b8b9a-f30b-426b-b08c-36c30deea621"]},{"text":"i enter password as \"Testing@123\"","id":"7d2aaecf-86f5-4df8-b89d-415d834a3489","astNodeIds":["9fcb5c71-79c6-46db-af35-0e6069be249f"]},{"text":"i click on login button","id":"ea36f252-8da6-4a2b-9696-a8989c26c94d","astNodeIds":["0d4752d6-ee34-48cc-97b6-1adb165428d7"]},{"text":"i should be logged in successfully","id":"0be41ea9-98a8-4dd3-ba8a-fdbd2867bedd","astNodeIds":["8265b39c-335e-4ee5-95ad-0f349c468d41"]}],"tags":[{"name":"@ui","astNodeId":"5a9218f3-4c4c-4655-9d9a-efc50412a0f8"}],"astNodeIds":["ec31ce77-5153-4102-9061-a6baaa3fe04d"]}},{"source":{"uri":"file:///Users/niharikasree/Desktop/Trainings/SeleniumJava/JuneWeekdayBatch/CucumberBDD_Junit_Pom/src/test/java/features/LoginMultipleUsers.feature","data":"Feature: login to nop commerce\n  In order to login to application\n  As a valid user\n  I should provide valid email and password\n\n Scenario Outline: Verify login with valid credentials\n   Given i navigate to url \"https://demo.nopcommerce.com/\"\n   Then  i should be navigated to home page\n   When  i click on login link from the navbar\n   Then  i should be navigated to login page\n   When  i enter email as \"\u003cemail\u003e\"\n   And   i enter password as \"\u003cpassword\u003e\"\n   And   i click on login button\n   Then  i should be logged in successfully\n\n   Examples:\n   |   email                |  password         |\n   |    user1@nop.com       |  Testing@123      |\n   |    user2@nop.com       |  Testing@123      |\n   |    user3@nop.com       |  Testing@123      |\n\n\n\n\n\n\n\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///Users/niharikasree/Desktop/Trainings/SeleniumJava/JuneWeekdayBatch/CucumberBDD_Junit_Pom/src/test/java/features/LoginMultipleUsers.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"login to nop commerce","description":"  In order to login to application\n  As a valid user\n  I should provide valid email and password","children":[{"scenario":{"location":{"line":6,"column":2},"keyword":"Scenario Outline","name":"Verify login with valid credentials","steps":[{"location":{"line":7,"column":4},"keyword":"Given ","text":"i navigate to url \"https://demo.nopcommerce.com/\"","id":"3c4a3484-cded-4a4e-8e93-14c51d00ed04"},{"location":{"line":8,"column":4},"keyword":"Then ","text":"i should be navigated to home page","id":"542a6ee5-5f0d-4b07-b924-a3b4f3d22e0b"},{"location":{"line":9,"column":4},"keyword":"When ","text":"i click on login link from the navbar","id":"c4eea0c6-0d08-4c17-b6f0-e705a8c2856a"},{"location":{"line":10,"column":4},"keyword":"Then ","text":"i should be navigated to login page","id":"9419e9b1-857c-4139-912d-c650db0cc49e"},{"location":{"line":11,"column":4},"keyword":"When ","text":"i enter email as \"\u003cemail\u003e\"","id":"0c321cf3-79a5-42e0-ad7a-12de067fe7ac"},{"location":{"line":12,"column":4},"keyword":"And ","text":"i enter password as \"\u003cpassword\u003e\"","id":"7707f83e-7905-44aa-bf2e-73dd974f6757"},{"location":{"line":13,"column":4},"keyword":"And ","text":"i click on login button","id":"e96645a4-4b05-459d-8099-7f3b19fd9c56"},{"location":{"line":14,"column":4},"keyword":"Then ","text":"i should be logged in successfully","id":"d3ffb6e7-e28c-42b7-919b-ea034bb6062f"}],"examples":[{"location":{"line":16,"column":4},"keyword":"Examples","tableHeader":{"location":{"line":17,"column":4},"cells":[{"location":{"line":17,"column":8},"value":"email"},{"location":{"line":17,"column":32},"value":"password"}],"id":"4b9ebc7b-c006-4a96-83f7-4d9325d4d7fa"},"tableBody":[{"location":{"line":18,"column":4},"cells":[{"location":{"line":18,"column":9},"value":"user1@nop.com"},{"location":{"line":18,"column":32},"value":"Testing@123"}],"id":"e8c6d44c-6fc3-404f-ad48-81e7e0fcdf7e"},{"location":{"line":19,"column":4},"cells":[{"location":{"line":19,"column":9},"value":"user2@nop.com"},{"location":{"line":19,"column":32},"value":"Testing@123"}],"id":"adcdf92d-ad0b-451d-993b-e8bc7a4aed98"},{"location":{"line":20,"column":4},"cells":[{"location":{"line":20,"column":9},"value":"user3@nop.com"},{"location":{"line":20,"column":32},"value":"Testing@123"}],"id":"0067eff8-2428-4982-8818-01d27d0f77cb"}],"id":"8ab0c5aa-0564-4013-85cd-5431354f993c"}],"id":"147b28b8-5a81-4af1-9a67-a622a7e28894"}}]}}},{"pickle":{"id":"4e709ce2-3300-4f13-9aab-349a8e422953","uri":"file:///Users/niharikasree/Desktop/Trainings/SeleniumJava/JuneWeekdayBatch/CucumberBDD_Junit_Pom/src/test/java/features/LoginMultipleUsers.feature","name":"Verify login with valid credentials","language":"en","steps":[{"text":"i navigate to url \"https://demo.nopcommerce.com/\"","id":"77d9079a-0ec8-4a61-bca7-0af2a51eff12","astNodeIds":["3c4a3484-cded-4a4e-8e93-14c51d00ed04","e8c6d44c-6fc3-404f-ad48-81e7e0fcdf7e"]},{"text":"i should be navigated to home page","id":"e2c29788-653b-4fe8-948f-492cfa4fa17c","astNodeIds":["542a6ee5-5f0d-4b07-b924-a3b4f3d22e0b","e8c6d44c-6fc3-404f-ad48-81e7e0fcdf7e"]},{"text":"i click on login link from the navbar","id":"d2ee9c39-b9e6-4fce-a03f-96413b6bf66d","astNodeIds":["c4eea0c6-0d08-4c17-b6f0-e705a8c2856a","e8c6d44c-6fc3-404f-ad48-81e7e0fcdf7e"]},{"text":"i should be navigated to login page","id":"dc746a91-dd65-4805-9698-eac65d250fd8","astNodeIds":["9419e9b1-857c-4139-912d-c650db0cc49e","e8c6d44c-6fc3-404f-ad48-81e7e0fcdf7e"]},{"text":"i enter email as \"user1@nop.com\"","id":"f21061f4-569f-433a-84db-b965296a056d","astNodeIds":["0c321cf3-79a5-42e0-ad7a-12de067fe7ac","e8c6d44c-6fc3-404f-ad48-81e7e0fcdf7e"]},{"text":"i enter password as \"Testing@123\"","id":"1e0dde94-c5be-4fc9-a2b9-651e3646a255","astNodeIds":["7707f83e-7905-44aa-bf2e-73dd974f6757","e8c6d44c-6fc3-404f-ad48-81e7e0fcdf7e"]},{"text":"i click on login button","id":"8f0d5b35-d73b-4dfd-94bc-4285d297fe84","astNodeIds":["e96645a4-4b05-459d-8099-7f3b19fd9c56","e8c6d44c-6fc3-404f-ad48-81e7e0fcdf7e"]},{"text":"i should be logged in successfully","id":"ca2b5968-6247-422e-9f08-9e422eec299c","astNodeIds":["d3ffb6e7-e28c-42b7-919b-ea034bb6062f","e8c6d44c-6fc3-404f-ad48-81e7e0fcdf7e"]}],"astNodeIds":["147b28b8-5a81-4af1-9a67-a622a7e28894","e8c6d44c-6fc3-404f-ad48-81e7e0fcdf7e"]}},{"pickle":{"id":"c2f6ffc4-1e09-4da9-bb39-000e86cff8f1","uri":"file:///Users/niharikasree/Desktop/Trainings/SeleniumJava/JuneWeekdayBatch/CucumberBDD_Junit_Pom/src/test/java/features/LoginMultipleUsers.feature","name":"Verify login with valid credentials","language":"en","steps":[{"text":"i navigate to url \"https://demo.nopcommerce.com/\"","id":"3832dffc-c06d-4324-b410-a3a74569c8a4","astNodeIds":["3c4a3484-cded-4a4e-8e93-14c51d00ed04","adcdf92d-ad0b-451d-993b-e8bc7a4aed98"]},{"text":"i should be navigated to home page","id":"3593bf7b-a209-44e0-86bc-19a5a5567812","astNodeIds":["542a6ee5-5f0d-4b07-b924-a3b4f3d22e0b","adcdf92d-ad0b-451d-993b-e8bc7a4aed98"]},{"text":"i click on login link from the navbar","id":"cd5980c3-0818-4167-93b7-302874fe6dac","astNodeIds":["c4eea0c6-0d08-4c17-b6f0-e705a8c2856a","adcdf92d-ad0b-451d-993b-e8bc7a4aed98"]},{"text":"i should be navigated to login page","id":"a4de87e4-899f-478f-94a6-efdc292e38b7","astNodeIds":["9419e9b1-857c-4139-912d-c650db0cc49e","adcdf92d-ad0b-451d-993b-e8bc7a4aed98"]},{"text":"i enter email as \"user2@nop.com\"","id":"8af8e778-ab4c-4297-abb2-7abd316e574d","astNodeIds":["0c321cf3-79a5-42e0-ad7a-12de067fe7ac","adcdf92d-ad0b-451d-993b-e8bc7a4aed98"]},{"text":"i enter password as \"Testing@123\"","id":"2ac6b7b7-1d6d-4d30-974f-7137b4130a54","astNodeIds":["7707f83e-7905-44aa-bf2e-73dd974f6757","adcdf92d-ad0b-451d-993b-e8bc7a4aed98"]},{"text":"i click on login button","id":"ea501d30-6a0a-45e2-aafb-e7a0d17198fc","astNodeIds":["e96645a4-4b05-459d-8099-7f3b19fd9c56","adcdf92d-ad0b-451d-993b-e8bc7a4aed98"]},{"text":"i should be logged in successfully","id":"82b4e640-335d-4dd8-af8f-26318f4bf50f","astNodeIds":["d3ffb6e7-e28c-42b7-919b-ea034bb6062f","adcdf92d-ad0b-451d-993b-e8bc7a4aed98"]}],"astNodeIds":["147b28b8-5a81-4af1-9a67-a622a7e28894","adcdf92d-ad0b-451d-993b-e8bc7a4aed98"]}},{"pickle":{"id":"c9d8d6d3-3aab-4b6d-89bb-0a286c9d33a7","uri":"file:///Users/niharikasree/Desktop/Trainings/SeleniumJava/JuneWeekdayBatch/CucumberBDD_Junit_Pom/src/test/java/features/LoginMultipleUsers.feature","name":"Verify login with valid credentials","language":"en","steps":[{"text":"i navigate to url \"https://demo.nopcommerce.com/\"","id":"0f73efa7-7150-49a8-80f6-8850d676217b","astNodeIds":["3c4a3484-cded-4a4e-8e93-14c51d00ed04","0067eff8-2428-4982-8818-01d27d0f77cb"]},{"text":"i should be navigated to home page","id":"d0800da2-e412-4dc2-ba67-ca22514a5c9a","astNodeIds":["542a6ee5-5f0d-4b07-b924-a3b4f3d22e0b","0067eff8-2428-4982-8818-01d27d0f77cb"]},{"text":"i click on login link from the navbar","id":"d09ed7c8-6f6a-4a0a-8b6a-23804e8fa417","astNodeIds":["c4eea0c6-0d08-4c17-b6f0-e705a8c2856a","0067eff8-2428-4982-8818-01d27d0f77cb"]},{"text":"i should be navigated to login page","id":"ea704471-fcea-4522-b8ca-f1eecec862fb","astNodeIds":["9419e9b1-857c-4139-912d-c650db0cc49e","0067eff8-2428-4982-8818-01d27d0f77cb"]},{"text":"i enter email as \"user3@nop.com\"","id":"8ab755af-4d1c-435d-9e0d-d92886414d70","astNodeIds":["0c321cf3-79a5-42e0-ad7a-12de067fe7ac","0067eff8-2428-4982-8818-01d27d0f77cb"]},{"text":"i enter password as \"Testing@123\"","id":"d48863b4-15a5-4c03-a4ac-0db0b442ed61","astNodeIds":["7707f83e-7905-44aa-bf2e-73dd974f6757","0067eff8-2428-4982-8818-01d27d0f77cb"]},{"text":"i click on login button","id":"01ad822d-3782-4874-bf32-cc5134e83bc2","astNodeIds":["e96645a4-4b05-459d-8099-7f3b19fd9c56","0067eff8-2428-4982-8818-01d27d0f77cb"]},{"text":"i should be logged in successfully","id":"c3aa45f9-1370-49c7-b24d-d2f4c60f4181","astNodeIds":["d3ffb6e7-e28c-42b7-919b-ea034bb6062f","0067eff8-2428-4982-8818-01d27d0f77cb"]}],"astNodeIds":["147b28b8-5a81-4af1-9a67-a622a7e28894","0067eff8-2428-4982-8818-01d27d0f77cb"]}},{"source":{"uri":"file:///Users/niharikasree/Desktop/Trainings/SeleniumJava/JuneWeekdayBatch/CucumberBDD_Junit_Pom/src/test/java/features/Register.feature","data":"Feature: Register new user\n\n  @regression   @sanity  @smoke @new\nScenario: Verify new user registartion by providing data in all mandatory fields\n  Given i navigate to url \"https://demo.nopcommerce.com/\"\n  Then  i should be navigated to home page\n  When  i click on register link from the navbar\n  Then  i should be navigated to register page\n  When  i select the gender as female\n  And   i enter firstName lastName email password confirmPassword\n  | firstName | lastName | email        | password   | confirmPassword|\n  |  user     | qa       | user4@nop.com| Testing@123| Testing@123|\n  And i click on register button\n  Then i should be registered successfully\n\n\n\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///Users/niharikasree/Desktop/Trainings/SeleniumJava/JuneWeekdayBatch/CucumberBDD_Junit_Pom/src/test/java/features/Register.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Register new user","children":[{"scenario":{"location":{"line":4,"column":1},"tags":[{"location":{"line":3,"column":3},"name":"@regression","id":"2f0a026f-246a-476d-aa9f-bf0656b98602"},{"location":{"line":3,"column":17},"name":"@sanity","id":"2cfa1fe1-49d6-48a0-a7b5-46c5071fef8b"},{"location":{"line":3,"column":26},"name":"@smoke","id":"6a19fa8a-0f83-489f-a538-0fae28366aeb"},{"location":{"line":3,"column":33},"name":"@new","id":"270fce2e-ac9f-4d8d-8bdb-a13c4a611e96"}],"keyword":"Scenario","name":"Verify new user registartion by providing data in all mandatory fields","steps":[{"location":{"line":5,"column":3},"keyword":"Given ","text":"i navigate to url \"https://demo.nopcommerce.com/\"","id":"7d0e7c43-803c-4c45-9836-9c838b0e6fab"},{"location":{"line":6,"column":3},"keyword":"Then ","text":"i should be navigated to home page","id":"b451165a-130a-452b-a13c-49c2dd01918f"},{"location":{"line":7,"column":3},"keyword":"When ","text":"i click on register link from the navbar","id":"e5fc301d-651a-426e-b4a7-cbb2444a75af"},{"location":{"line":8,"column":3},"keyword":"Then ","text":"i should be navigated to register page","id":"865602ac-35d5-4308-a61a-ab9a3e0b0040"},{"location":{"line":9,"column":3},"keyword":"When ","text":"i select the gender as female","id":"6aec7ecd-d748-449b-a973-2dc092b2934b"},{"location":{"line":10,"column":3},"keyword":"And ","text":"i enter firstName lastName email password confirmPassword","dataTable":{"location":{"line":11,"column":3},"rows":[{"location":{"line":11,"column":3},"cells":[{"location":{"line":11,"column":5},"value":"firstName"},{"location":{"line":11,"column":17},"value":"lastName"},{"location":{"line":11,"column":28},"value":"email"},{"location":{"line":11,"column":43},"value":"password"},{"location":{"line":11,"column":56},"value":"confirmPassword"}],"id":"a6539d61-ac80-4659-8585-64442b900e66"},{"location":{"line":12,"column":3},"cells":[{"location":{"line":12,"column":6},"value":"user"},{"location":{"line":12,"column":17},"value":"qa"},{"location":{"line":12,"column":28},"value":"user4@nop.com"},{"location":{"line":12,"column":43},"value":"Testing@123"},{"location":{"line":12,"column":56},"value":"Testing@123"}],"id":"66ae89e7-ee6c-4d3f-a6c9-c3e8bf069eeb"}]},"id":"3218e2da-2a79-4321-8aba-0ac9c4b1bab2"},{"location":{"line":13,"column":3},"keyword":"And ","text":"i click on register button","id":"e657bbdd-5040-4d81-88d3-bc36cd084e2a"},{"location":{"line":14,"column":3},"keyword":"Then ","text":"i should be registered successfully","id":"abc87de9-2700-438a-80f3-f79a841a0b94"}],"id":"4d42d76b-391c-4506-9a64-8cc773886850"}}]}}},{"pickle":{"id":"2ae19b8c-b648-4fb4-aa34-d6e91f86fdc9","uri":"file:///Users/niharikasree/Desktop/Trainings/SeleniumJava/JuneWeekdayBatch/CucumberBDD_Junit_Pom/src/test/java/features/Register.feature","name":"Verify new user registartion by providing data in all mandatory fields","language":"en","steps":[{"text":"i navigate to url \"https://demo.nopcommerce.com/\"","id":"3c7d0167-17b1-47fa-80b0-6590e8d39a3d","astNodeIds":["7d0e7c43-803c-4c45-9836-9c838b0e6fab"]},{"text":"i should be navigated to home page","id":"7316bfe2-69e0-41c6-bfdc-056e9c8eb24f","astNodeIds":["b451165a-130a-452b-a13c-49c2dd01918f"]},{"text":"i click on register link from the navbar","id":"44288f48-e8ce-408e-a172-7d9b767e0f4f","astNodeIds":["e5fc301d-651a-426e-b4a7-cbb2444a75af"]},{"text":"i should be navigated to register page","id":"e58200f3-2467-4ed7-9d16-d7f3c064198c","astNodeIds":["865602ac-35d5-4308-a61a-ab9a3e0b0040"]},{"text":"i select the gender as female","id":"5e5e1360-e87d-4bd6-9d58-37d9e774f882","astNodeIds":["6aec7ecd-d748-449b-a973-2dc092b2934b"]},{"text":"i enter firstName lastName email password confirmPassword","argument":{"dataTable":{"rows":[{"cells":[{"value":"firstName"},{"value":"lastName"},{"value":"email"},{"value":"password"},{"value":"confirmPassword"}]},{"cells":[{"value":"user"},{"value":"qa"},{"value":"user4@nop.com"},{"value":"Testing@123"},{"value":"Testing@123"}]}]}},"id":"d08b30cd-3141-4866-82f8-28348da44cc0","astNodeIds":["3218e2da-2a79-4321-8aba-0ac9c4b1bab2"]},{"text":"i click on register button","id":"e70c3b71-981c-495d-9613-8ca7e6678264","astNodeIds":["e657bbdd-5040-4d81-88d3-bc36cd084e2a"]},{"text":"i should be registered successfully","id":"bb0061e8-eeb6-4792-babc-cfa05649c295","astNodeIds":["abc87de9-2700-438a-80f3-f79a841a0b94"]}],"tags":[{"name":"@regression","astNodeId":"2f0a026f-246a-476d-aa9f-bf0656b98602"},{"name":"@sanity","astNodeId":"2cfa1fe1-49d6-48a0-a7b5-46c5071fef8b"},{"name":"@smoke","astNodeId":"6a19fa8a-0f83-489f-a538-0fae28366aeb"},{"name":"@new","astNodeId":"270fce2e-ac9f-4d8d-8bdb-a13c4a611e96"}],"astNodeIds":["4d42d76b-391c-4506-9a64-8cc773886850"]}},{"source":{"uri":"file:///Users/niharikasree/Desktop/Trainings/SeleniumJava/JuneWeekdayBatch/CucumberBDD_Junit_Pom/src/test/java/features/RegisterTest.feature","data":"Feature: Register new user\n\n\n  Background: navigate to url and click on register link\n    Given i navigate to url \"https://demo.nopcommerce.com/\"\n    Then  i should be navigated to home page\n    When  i click on register link from the navbar\n    Then  i should be navigated to register page\n\nScenario: Verify new user registration by providing data in all mandatory fields\n\n\n  When  i select the gender as female\n  And   i enter firstName lastName email password confirmPassword\n  | firstName | lastName | email        | password   | confirmPassword|\n  |  user     | qa       | user4@nop.com| Testing@123| Testing@123|\n  And i click on register button\n  Then i should be registered successfully\n\n\n  @regression\n Scenario: Verify error messages when data is not provided in mandatory fields\n\n   When  i click on register button\n   Then  i should see error messages for all the mandatory fields\n\n\n\n\n\n\n\n","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///Users/niharikasree/Desktop/Trainings/SeleniumJava/JuneWeekdayBatch/CucumberBDD_Junit_Pom/src/test/java/features/RegisterTest.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Register new user","children":[{"background":{"location":{"line":4,"column":3},"keyword":"Background","name":"navigate to url and click on register link","steps":[{"location":{"line":5,"column":5},"keyword":"Given ","text":"i navigate to url \"https://demo.nopcommerce.com/\"","id":"b638bb90-fe85-406f-817d-6082c5e7fd3f"},{"location":{"line":6,"column":5},"keyword":"Then ","text":"i should be navigated to home page","id":"d2008338-82ac-4761-85c9-92ec1902cfa1"},{"location":{"line":7,"column":5},"keyword":"When ","text":"i click on register link from the navbar","id":"12462cbf-c2de-4a10-830c-dba7f30021dd"},{"location":{"line":8,"column":5},"keyword":"Then ","text":"i should be navigated to register page","id":"c9dc4462-5c35-493f-8de8-1f059df88536"}],"id":"a8b0cb6d-4819-41ec-ac16-6cf4f048dc12"}},{"scenario":{"location":{"line":10,"column":1},"keyword":"Scenario","name":"Verify new user registration by providing data in all mandatory fields","steps":[{"location":{"line":13,"column":3},"keyword":"When ","text":"i select the gender as female","id":"38a24cd7-707c-40f3-84a5-bb6352da3b37"},{"location":{"line":14,"column":3},"keyword":"And ","text":"i enter firstName lastName email password confirmPassword","dataTable":{"location":{"line":15,"column":3},"rows":[{"location":{"line":15,"column":3},"cells":[{"location":{"line":15,"column":5},"value":"firstName"},{"location":{"line":15,"column":17},"value":"lastName"},{"location":{"line":15,"column":28},"value":"email"},{"location":{"line":15,"column":43},"value":"password"},{"location":{"line":15,"column":56},"value":"confirmPassword"}],"id":"6de68786-1ec1-4197-bc42-5eaa7c0ee5e9"},{"location":{"line":16,"column":3},"cells":[{"location":{"line":16,"column":6},"value":"user"},{"location":{"line":16,"column":17},"value":"qa"},{"location":{"line":16,"column":28},"value":"user4@nop.com"},{"location":{"line":16,"column":43},"value":"Testing@123"},{"location":{"line":16,"column":56},"value":"Testing@123"}],"id":"2f76d7d3-addd-4b4d-90e5-44c0dcf3744a"}]},"id":"bad07f67-3995-4ee5-af55-2ee7ca2cc37a"},{"location":{"line":17,"column":3},"keyword":"And ","text":"i click on register button","id":"0e50461b-33c2-4dc5-9e5c-7a6b77a4ea9c"},{"location":{"line":18,"column":3},"keyword":"Then ","text":"i should be registered successfully","id":"7adb27cb-f5ae-4b23-b9b1-363542b51cf2"}],"id":"1c82fe92-f337-4384-b078-670206e0bb10"}},{"scenario":{"location":{"line":22,"column":2},"tags":[{"location":{"line":21,"column":3},"name":"@regression","id":"16305dd5-93f5-4b30-bc43-27602fa9640c"}],"keyword":"Scenario","name":"Verify error messages when data is not provided in mandatory fields","steps":[{"location":{"line":24,"column":4},"keyword":"When ","text":"i click on register button","id":"de0938a6-34b8-45eb-905b-8085806f1248"},{"location":{"line":25,"column":4},"keyword":"Then ","text":"i should see error messages for all the mandatory fields","id":"0b1a261f-6823-45d1-bbdf-92a664f5ac7d"}],"id":"9b38f1b4-d29f-4d2b-ab95-8917f9dbaeaf"}}]}}},{"pickle":{"id":"5a70d1aa-e73d-4d9b-a6c7-611728955f97","uri":"file:///Users/niharikasree/Desktop/Trainings/SeleniumJava/JuneWeekdayBatch/CucumberBDD_Junit_Pom/src/test/java/features/RegisterTest.feature","name":"Verify new user registration by providing data in all mandatory fields","language":"en","steps":[{"text":"i navigate to url \"https://demo.nopcommerce.com/\"","id":"8314b557-1f4f-433c-9e79-3d2b766edf2e","astNodeIds":["b638bb90-fe85-406f-817d-6082c5e7fd3f"]},{"text":"i should be navigated to home page","id":"b1319bd5-39cc-4a51-bea3-be46167ffcfc","astNodeIds":["d2008338-82ac-4761-85c9-92ec1902cfa1"]},{"text":"i click on register link from the navbar","id":"74fbf40d-9991-4e44-b8de-d219517cd2a2","astNodeIds":["12462cbf-c2de-4a10-830c-dba7f30021dd"]},{"text":"i should be navigated to register page","id":"b06768ad-e005-46ff-bf95-2983b56130ab","astNodeIds":["c9dc4462-5c35-493f-8de8-1f059df88536"]},{"text":"i select the gender as female","id":"7a4bef8c-455a-4557-b833-21b4e534aa1b","astNodeIds":["38a24cd7-707c-40f3-84a5-bb6352da3b37"]},{"text":"i enter firstName lastName email password confirmPassword","argument":{"dataTable":{"rows":[{"cells":[{"value":"firstName"},{"value":"lastName"},{"value":"email"},{"value":"password"},{"value":"confirmPassword"}]},{"cells":[{"value":"user"},{"value":"qa"},{"value":"user4@nop.com"},{"value":"Testing@123"},{"value":"Testing@123"}]}]}},"id":"fee5db59-125b-4280-adb2-a0a5fa7a4056","astNodeIds":["bad07f67-3995-4ee5-af55-2ee7ca2cc37a"]},{"text":"i click on register button","id":"8eb5539d-4a0d-4488-ab62-d422fffb7e93","astNodeIds":["0e50461b-33c2-4dc5-9e5c-7a6b77a4ea9c"]},{"text":"i should be registered successfully","id":"551de24f-e806-4868-8a85-ea4e37ec51aa","astNodeIds":["7adb27cb-f5ae-4b23-b9b1-363542b51cf2"]}],"astNodeIds":["1c82fe92-f337-4384-b078-670206e0bb10"]}},{"pickle":{"id":"dcc887fc-4258-47ac-8e82-3a7908ee1f31","uri":"file:///Users/niharikasree/Desktop/Trainings/SeleniumJava/JuneWeekdayBatch/CucumberBDD_Junit_Pom/src/test/java/features/RegisterTest.feature","name":"Verify error messages when data is not provided in mandatory fields","language":"en","steps":[{"text":"i navigate to url \"https://demo.nopcommerce.com/\"","id":"009e73b6-bb1e-4d07-9685-8d29762453db","astNodeIds":["b638bb90-fe85-406f-817d-6082c5e7fd3f"]},{"text":"i should be navigated to home page","id":"ecba45d3-44aa-4a62-b081-bb8c044512d5","astNodeIds":["d2008338-82ac-4761-85c9-92ec1902cfa1"]},{"text":"i click on register link from the navbar","id":"92fbf652-485b-48e6-a4bd-61fa2de8bbfe","astNodeIds":["12462cbf-c2de-4a10-830c-dba7f30021dd"]},{"text":"i should be navigated to register page","id":"27b5f442-f707-41bf-9d0d-ef308cb1aa1f","astNodeIds":["c9dc4462-5c35-493f-8de8-1f059df88536"]},{"text":"i click on register button","id":"3dcab70c-0489-400b-81c1-411ce10398c7","astNodeIds":["de0938a6-34b8-45eb-905b-8085806f1248"]},{"text":"i should see error messages for all the mandatory fields","id":"a7ed8a15-85a1-49b8-9de7-c2046f4259a7","astNodeIds":["0b1a261f-6823-45d1-bbdf-92a664f5ac7d"]}],"tags":[{"name":"@regression","astNodeId":"16305dd5-93f5-4b30-bc43-27602fa9640c"}],"astNodeIds":["9b38f1b4-d29f-4d2b-ab95-8917f9dbaeaf"]}},{"testCase":{"id":"933e7e14-241b-4590-b8b4-6e41648a4623","pickleId":"2ae19b8c-b648-4fb4-aa34-d6e91f86fdc9","testSteps":[{"id":"4465105c-d928-4e75-ab15-f85746c75237","hookId":"a01c087d-9592-443c-8c7a-359d4944705d"},{"id":"2247309e-f47e-4d1e-bd05-483cdc73375f","pickleStepId":"3c7d0167-17b1-47fa-80b0-6590e8d39a3d","stepDefinitionIds":["8a8e160d-6be9-44ed-b8ab-56af204b6e54"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":18,"value":"\"https://demo.nopcommerce.com/\"","children":[{"start":19,"value":"https://demo.nopcommerce.com/","children":[{}]},{"children":[{}]}]}}]}]},{"id":"95724179-2c47-4af6-9f05-f98089f22486","pickleStepId":"7316bfe2-69e0-41c6-bfdc-056e9c8eb24f","stepDefinitionIds":["102e94fb-3dc5-4765-9e9d-d55f36a5daf2"],"stepMatchArgumentsLists":[{}]},{"id":"589fbff1-d3a3-463b-b497-7adb011dfd71","pickleStepId":"44288f48-e8ce-408e-a172-7d9b767e0f4f","stepDefinitionIds":["18f38f62-1946-4173-91f9-2f2a877a03af"],"stepMatchArgumentsLists":[{}]},{"id":"2b008667-2f48-48cc-8683-5eb832131546","pickleStepId":"e58200f3-2467-4ed7-9d16-d7f3c064198c","stepDefinitionIds":["fc105d97-bebc-449f-b0e6-9579a7868d4d"],"stepMatchArgumentsLists":[{}]},{"id":"e753658e-ae97-4b68-8a47-1cfacec758db","pickleStepId":"5e5e1360-e87d-4bd6-9d58-37d9e774f882","stepDefinitionIds":["a1c134dd-d0d5-4d13-bec5-ef24bb45f113"],"stepMatchArgumentsLists":[{}]},{"id":"db9e58a2-7d19-4f0e-a580-25c4567283ff","pickleStepId":"d08b30cd-3141-4866-82f8-28348da44cc0","stepDefinitionIds":["7b3b5097-b4c3-44f0-9097-da30dd859bba"],"stepMatchArgumentsLists":[{}]},{"id":"ac89fbd2-f591-4e54-ba96-a0df9e0400aa","pickleStepId":"e70c3b71-981c-495d-9613-8ca7e6678264","stepDefinitionIds":["98bbe15e-7e99-4e49-841c-0fbedfe6056a"],"stepMatchArgumentsLists":[{}]},{"id":"4506451f-890d-40c4-a42f-29d967ff2fc2","pickleStepId":"bb0061e8-eeb6-4792-babc-cfa05649c295","stepDefinitionIds":["49fdcf6a-5104-4c53-896e-e8eb9114b271"],"stepMatchArgumentsLists":[{}]},{"id":"9eefedb1-020f-41fd-8f79-34c7e1f7202e","hookId":"ba48adab-5952-4f2d-99b2-e382e4082fb6"}]}},{"testCaseStarted":{"timestamp":{"seconds":"1626261726","nanos":357000000},"testCaseId":"933e7e14-241b-4590-b8b4-6e41648a4623","id":"c1fe88b4-146b-4f12-bfaf-d31bb782bd4d"}},{"testStepStarted":{"timestamp":{"seconds":"1626261726","nanos":365000000},"testStepId":"4465105c-d928-4e75-ab15-f85746c75237","testCaseStartedId":"c1fe88b4-146b-4f12-bfaf-d31bb782bd4d"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"2","nanos":761000000}},"timestamp":{"seconds":"1626261729","nanos":126000000},"testStepId":"4465105c-d928-4e75-ab15-f85746c75237","testCaseStartedId":"c1fe88b4-146b-4f12-bfaf-d31bb782bd4d"}},{"testStepStarted":{"timestamp":{"seconds":"1626261729","nanos":144000000},"testStepId":"2247309e-f47e-4d1e-bd05-483cdc73375f","testCaseStartedId":"c1fe88b4-146b-4f12-bfaf-d31bb782bd4d"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"2","nanos":343000000}},"timestamp":{"seconds":"1626261731","nanos":487000000},"testStepId":"2247309e-f47e-4d1e-bd05-483cdc73375f","testCaseStartedId":"c1fe88b4-146b-4f12-bfaf-d31bb782bd4d"}},{"testStepStarted":{"timestamp":{"seconds":"1626261731","nanos":487000000},"testStepId":"95724179-2c47-4af6-9f05-f98089f22486","testCaseStartedId":"c1fe88b4-146b-4f12-bfaf-d31bb782bd4d"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"nanos":12000000}},"timestamp":{"seconds":"1626261731","nanos":499000000},"testStepId":"95724179-2c47-4af6-9f05-f98089f22486","testCaseStartedId":"c1fe88b4-146b-4f12-bfaf-d31bb782bd4d"}},{"testStepStarted":{"timestamp":{"seconds":"1626261731","nanos":501000000},"testStepId":"589fbff1-d3a3-463b-b497-7adb011dfd71","testCaseStartedId":"c1fe88b4-146b-4f12-bfaf-d
